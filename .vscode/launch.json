@@ -1,0 +1,29 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ - 生成和调试活动文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/oracle/soilder/build/my_cmake_exe",//这里要改 添加绝对路径
+            "args": [],//需要输入文件的参数
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",//进入选择的目录
+            "environment": [],//环境变量
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build",//这里对应task.json里的label标签
+            "miDebuggerPath": "/usr/bin/gdb"//gdb的目录
+        }
+    ]
+}

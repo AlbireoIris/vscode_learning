@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "options": {"cwd": "/oracle/soilder/build"},
+    "tasks": [
+
+        //第一个任务 cmake
+        {
+            "type": "shell",   //定义任务是被作为进程运行还是在 shell 中作为命令运行。
+            "label": "cmake",  //任务标签名
+            "command": "cmake",//具体任务执行的指令
+            "args": [".."],    //任务执行的参数
+        },
+
+        //这是第二个任务
+        {
+            "label": "make",  //任务标签名
+            "command":"make", //任务执行的指令
+            "args": [],       //任务执行附带的参数，如果么有空着，不要填""
+        },
+
+        //这是第三个任务
+        {
+            "label": "Build", //任务标签名
+            "dependsOrder": "sequence", 
+            //确定此任务的依赖任务的顺序。请注意，此属性不是递归的。sequence: 按顺序运行所有 dependsOn 任务。
+            "dependsOn":["cmake","make"] //这也就是dependon任务列表
+        }
+    ],
+}
