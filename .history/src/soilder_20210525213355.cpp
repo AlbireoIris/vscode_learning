@@ -1,3 +1,0 @@
-#include"soilder.h"
-
-cSoilder
