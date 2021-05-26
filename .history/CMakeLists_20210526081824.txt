@@ -1,0 +1,7 @@
+cmake_minimum_required("VERSION 2.8")
+
+project("Soilder")
+
+#相对路径和绝对路径都可以，不需要加双引号
+include_directories(include)
+

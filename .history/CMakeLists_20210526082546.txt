@@ -1,0 +1,9 @@
+
+cmake_minimum_required(VERSION 2.8)
+
+project(Soilder)
+
+#相对路径和绝对路径都可以，不需要加双引号 ${CMAKE_SOURCE_DIR}变量名就是当前的目录的绝对路径名
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+add_executable(my_cmake_exe main.cpp src/gun.cpp src/soilder.cpp)
